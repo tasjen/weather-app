@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  
+}
+
+header{
+  display: flex;
+  justify-content: center;
+  font-size: 48px;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+}
+
+main {
+  flex:1;
+  padding: 25px 10px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 10fr;
+  grid-template-areas:
+  "form form"
+  "days days"
+  "info hours";
+  gap: 10px;
+}
+
+#location {
+  grid-area: form;
+  justify-self: center;
+}
+#day-button-container {
+  grid-area: days;
+  justify-self: center;
+}
+#info-container {
+  grid-area: info;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+#forecast-container {
+  grid-area: hours;
+  border: 2px solid black;
+  border-radius: 10px;
+}
